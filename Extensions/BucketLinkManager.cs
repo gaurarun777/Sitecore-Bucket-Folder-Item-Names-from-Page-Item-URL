@@ -19,9 +19,7 @@ namespace Sitecore.Foundation.SitecoreExtensions.Extensions
                 var bucketItem = item.GetParentBucketItemOrParent();
                 if (bucketItem != null && bucketItem.IsABucket())
                 {
-                    //var bucketUrl = base.Build(bucketItem, options);
-                    //for getting parent of article folder
-                    var bucketUrl = base.Build(bucketItem.Parent, options);
+                    var bucketUrl = base.Build(bucketItem, options);
                     if ((bool)options.AddAspxExtension)
                     {
                         bucketUrl = bucketUrl.Replace(".aspx", string.Empty);
